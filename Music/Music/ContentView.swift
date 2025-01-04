@@ -15,11 +15,14 @@ struct ContentView: View {
         ZStack {
             BackgroundView(imageName: "background")
             HStack{
-                Button {
-                    soundPlayer.play(name: "cymbalSound")
-                }
-                label: { Image("cymbal")
-                }
+                Button(
+                    action: {
+                        soundPlayer.play(name: "cymbalSound")
+                    },
+                    label: {
+                        Image("cymbal")
+                    }
+                )
                 Button {
                     soundPlayer.play(name: "guitarSound")
                 }
